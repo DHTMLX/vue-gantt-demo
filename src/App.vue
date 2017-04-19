@@ -6,18 +6,18 @@
           <h2>{{selectedTask.text}}</h2>
           <span><b>ID: </b>{{selectedTask.id}}</span><br/>
           <span><b>Progress: </b>{{selectedTask.progress|toPercent}}%</span><br/>
-          <span><b>Start Date: </b>{{selectedTask.start_date}}</span><br/>
-          <span><b>End Date: </b>{{selectedTask.end_date}}</span><br/>
+          <span><b>Start Date: </b>{{selectedTask.start_date|niceDate}}</span><br/>
+          <span><b>End Date: </b>{{selectedTask.end_date|niceDate}}</span><br/>
         </div>
-		<div v-else class="select-task-prompt">
-			<h2>Click any task</h2>
-		</div>
+        <div v-else class="select-task-prompt">
+          <h2>Click any task</h2>
+        </div>
       </div>
       <ul class="gantt-messages">
-        <li class="gantt-message" v-for="message in lastMessages">{{message}}</li>
+        <li class="gantt-message" v-for="message in messages">{{message}}</li>
       </ul>
     </div>
-    <gantt class="left-container" :gantt-tasks="tasks" @task-updated="logTaskUpdate" @link-updated="logLinkUpdate" @task-selected="selectTask"></gantt>
+    <gantt class="left-container" :tasks="tasks" @task-updated="logTaskUpdate" @link-updated="logLinkUpdate" @task-selected="selectTask"></gantt>
   </div>
 </template>
 
@@ -38,7 +38,7 @@ export default {
           {id: 1, source: 1, target: 2, type: '0'}
         ]
       },
-	  selectedTask: null,
+    selectedTask: null,
       messages: []
     }
   },
@@ -46,11 +46,9 @@ export default {
     toPercent: function (val) {
       if(!val) return "0"
       return Math.round((+val)*100)
-    }
-  },
-  computed: {
-    lastMessages: function () {
-      return this.messages.slice().reverse()
+    },
+    niceDate: function(obj){
+      return `${obj.getFullYear()} / ${obj.getMonth()} / ${obj.getDate()}`;
     }
   },
   methods: {
@@ -59,21 +57,22 @@ export default {
     },
   
     addMessage: function (message) {
-      this.messages.push(message)
+      this.messages.unshift(message)
       if(this.messages.length > 40) {
-        this.messages.shift()
+        this.messages.pop()
       }
     },
 
     logTaskUpdate: function (id, mode, task) {
-      var message = "Task " + mode + ": "  + id + (task && task.text ? " (" + task.text + ")": "")
+      var text = (task && task.text ? ` (${task.text})`: "");
+      var message = `Task ${mode}: ${id} ${text}`;
       this.addMessage(message)
     },
 
     logLinkUpdate: function (id, mode, link) {
-      var message = "Link " + mode + ": "  + id
+      var message = `Link ${mode}: ${id}`;
       if(link){
-        message += " ( source: " + link.source + ", target: " + link.target + " )"
+        message += ` ( source: ${link.source}, target: ${link.target} )`;
       }
       this.addMessage(message)
     }
@@ -95,14 +94,18 @@ export default {
 
   .left-container {
     overflow: hidden;
+    position: relative;
     height: 100%;
   }
 
   .right-container {
-	border-right: 1px solid #cecece;
+    border-right: 1px solid #cecece;
     float: right;
     height: 100%;
     width: 340px;
+    box-shadow: 0px 0px 5px 2px #aaa;
+    position: relative;
+    z-index:2;
   }
 
   .gantt-messages {
@@ -124,7 +127,7 @@ export default {
   }
 
   .gantt-selected-info {
-	border-bottom: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
     box-sizing: border-box;
     font-family: Geneva, Arial, Helvetica, sans-serif;
     height: 50%;
