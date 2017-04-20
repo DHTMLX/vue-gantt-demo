@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Gantt from './components/Gantt.vue';
+import Gantt from './components/Gantt.vue'
 
 export default {
   name: 'app',
@@ -43,36 +43,36 @@ export default {
     }
   },
   filters: {
-    toPercent: function (val) {
-      if(!val) return "0"
-      return Math.round((+val)*100)
+    toPercent (val) {
+      if(!val) return '0'
+      return Math.round((+val) * 100)
     },
-    niceDate: function(obj){
-      return `${obj.getFullYear()} / ${obj.getMonth()} / ${obj.getDate()}`;
+    niceDate (obj){
+      return `${obj.getFullYear()} / ${obj.getMonth()} / ${obj.getDate()}`
     }
   },
   methods: {
-    selectTask: function(task){
+    selectTask (task) {
       this.selectedTask = task
     },
   
-    addMessage: function (message) {
+    addMessage (message) {
       this.messages.unshift(message)
       if(this.messages.length > 40) {
         this.messages.pop()
       }
     },
 
-    logTaskUpdate: function (id, mode, task) {
-      var text = (task && task.text ? ` (${task.text})`: "");
-      var message = `Task ${mode}: ${id} ${text}`;
+    logTaskUpdate (id, mode, task) {
+      let text = (task && task.text ? ` (${task.text})`: '')
+      let message = `Task ${mode}: ${id} ${text}`
       this.addMessage(message)
     },
 
-    logLinkUpdate: function (id, mode, link) {
-      var message = `Link ${mode}: ${id}`;
+    logLinkUpdate (id, mode, link) {
+      let message = `Link ${mode}: ${id}`
       if(link){
-        message += ` ( source: ${link.source}, target: ${link.target} )`;
+        message += ` ( source: ${link.source}, target: ${link.target} )`
       }
       this.addMessage(message)
     }
@@ -103,7 +103,7 @@ export default {
     float: right;
     height: 100%;
     width: 340px;
-    box-shadow: 0px 0px 5px 2px #aaa;
+    box-shadow: 0 0 5px 2px #aaa;
     position: relative;
     z-index:2;
   }
