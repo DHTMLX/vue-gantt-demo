@@ -3,3 +3,11 @@ node_modules/
 dist/
 npm-debug.log
 yarn-error.log
+
+# IDE files #
+nbproject
+.~lock.*
+.buildpath
+.idea
+.project
+.settings
