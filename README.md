@@ -1,4 +1,4 @@
-# gantt-vue
+# Gantt chart for Vue.js 
 
 Here you can find the demo sources of Gantt chart component for Vue.js framework. The demo is implemented with the help of JavaScript Gantt chart library - dhtmlxGantt.
 
