@@ -48,7 +48,7 @@ export default {
       return Math.round((+val) * 100)
     },
     niceDate (obj){
-      return `${obj.getFullYear()} / ${obj.getMonth()} / ${obj.getDate()}`
+      return `${obj.getFullYear()} / ${obj.getMonth() + 1} / ${obj.getDate()}`
     }
   },
   methods: {
