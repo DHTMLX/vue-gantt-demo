@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Gantt from './components/Gantt.vue'
+import Gantt from './components/Gantt.vue';
 
 export default {
   name: 'app',
@@ -31,20 +31,22 @@ export default {
     return {
       tasks: {
         data: [
-          {id: 1, text: 'Task #1', start_date: '15-04-2017', duration: 3, progress: 0.6},
-          {id: 2, text: 'Task #2', start_date: '18-04-2017', duration: 3, progress: 0.4}
+          {id: 1, text: 'Task #1', start_date: '2020-01-17', duration: 3, progress: 0.6},
+          {id: 2, text: 'Task #2', start_date: '2020-01-20', duration: 3, progress: 0.4}
         ],
         links: [
           {id: 1, source: 1, target: 2, type: '0'}
         ]
       },
-    selectedTask: null,
+      selectedTask: null,
       messages: []
     }
   },
   filters: {
     toPercent (val) {
-      if(!val) return '0'
+      if (!val){
+        return '0'
+      }
       return Math.round((+val) * 100)
     },
     niceDate (obj){
@@ -52,13 +54,13 @@ export default {
     }
   },
   methods: {
-    selectTask (task) {
+    selectTask(task) {
       this.selectedTask = task
     },
-  
+
     addMessage (message) {
       this.messages.unshift(message)
-      if(this.messages.length > 40) {
+      if (this.messages.length > 40) {
         this.messages.pop()
       }
     },
@@ -71,7 +73,7 @@ export default {
 
     logLinkUpdate (id, mode, link) {
       let message = `Link ${mode}: ${id}`
-      if(link){
+      if (link) {
         message += ` ( source: ${link.source}, target: ${link.target} )`
       }
       this.addMessage(message)
@@ -127,7 +129,7 @@ export default {
   }
 
   .gantt-selected-info {
-  border-bottom: 1px solid #cecece;
+    border-bottom: 1px solid #cecece;
     box-sizing: border-box;
     font-family: Geneva, Arial, Helvetica, sans-serif;
     height: 50%;
@@ -138,8 +140,9 @@ export default {
   .gantt-selected-info h2 {
     border-bottom: 1px solid #cecece;
   }
-  
+
   .select-task-prompt h2{
     color: #d9d9d9;
   }
+
 </style>
