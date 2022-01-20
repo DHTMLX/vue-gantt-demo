@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import 'dhtmlx-gantt'
+import { gantt } from 'dhtmlx-gantt'
 export default {
   name: 'gantt',
   props: {
