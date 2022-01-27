@@ -14,7 +14,7 @@
         </div>
       </div>
       <ul class="gantt-messages">
-        <li class="gantt-message" v-for="message in messages">{{message}}</li>
+        <li class="gantt-message" v-for="(message, index) in messages" v-bind:key="index">{{message}}</li>
       </ul>
     </div>
     <gantt class="left-container" :tasks="tasks" @task-updated="logTaskUpdate" @link-updated="logLinkUpdate" @task-selected="selectTask"></gantt>
