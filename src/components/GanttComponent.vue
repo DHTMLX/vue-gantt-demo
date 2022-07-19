@@ -1,11 +1,11 @@
 <template>
-  <div ref="gantt"></div>
+  <div ref="ganttContainer"></div>
 </template>
 
 <script>
-import { gantt } from 'dhtmlx-gantt'
+import { gantt } from 'dhtmlx-gantt';
+
 export default {
-  name: 'gantt',
   props: {
     tasks: {
       type: Object,
@@ -47,9 +47,9 @@ export default {
 
   mounted: function () {
     this.$_initGanttEvents();
-    gantt.config.xml_date = "%Y-%m-%d";
+    gantt.config.date_format = "%Y-%m-%d";
 
-    gantt.init(this.$refs.gantt);
+    gantt.init(this.$refs.ganttContainer);
     gantt.parse(this.$props.tasks);
 
     this.$_initDataProcessor();
