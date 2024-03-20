@@ -9,9 +9,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@dhx/trial-gantt": "^8.0.6",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13",
-    "dhtmlx-gantt": "^7.1.9"
+    "vue": "^3.2.37"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
