@@ -1,6 +1,6 @@
 {
-  "name": "gantt-vue",
-  "version": "1.3.0",
+  "name": "vue-gantt-demo",
+  "version": "1.4.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

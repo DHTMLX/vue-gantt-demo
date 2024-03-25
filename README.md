@@ -1,29 +1,31 @@
-# Gantt chart for Vue.js 
+# DHTMLX Gantt with Vue Demo
 
-Here you can find the demo sources of Gantt chart component for Vue.js framework. The demo is implemented with the help of JavaScript Gantt chart library - dhtmlxGantt.
+[![dhtmlx.com](https://img.shields.io/badge/made%20by-DHTMLX-blue)](https://dhtmlx.com/)
 
-## Project setup
+![DHTMLX Gantt with Vue Demo](https://raw.githubusercontent.com/DHTMLX/vue-gantt-demo/master/gantt.png)
 
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
+## How to start
 
 ```
-yarn serve
+yarn 
+yarn start
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
+You can also use [GitHub Codespaces](https://docs.github.com/en/codespaces/developing-in-a-codespace/creating-a-codespace-for-a-repository) to run online.
 
-For detailed explanation on how things work, consult the [Configuration Reference](https://cli.vuejs.org/config/)..
+## Useful links
+- **[Online demo](https://replit.com/@dhtmlx/dhtmlx-gantt-with-vue)**
+- [Full tutorial](https://dhtmlx.com/blog/use-dhtmlxgantt-vue-js-framework-demo/)
+- [Video guide](https://www.youtube.com/watch?v=IgoXvVSerkE)
+- [Learn about DHTMLX Gantt](https://dhtmlx.com/docs/products/dhtmlxGantt/)
+- [More demos about the DHTMLX Gantt functionality](https://docs.dhtmlx.com/gantt/samples)
+- [Technical support ](https://forum.dhtmlx.com/c/gantt)
+- [Online  documentation](https://docs.dhtmlx.com/gantt/)
 
+## Follow us
 
-## Related resources
-
- - Read full tutorial here: https://dhtmlx.com/blog/use-dhtmlxgantt-vue-js-framework-demo/
- - Learn about dhtmlxGantt here: https://dhtmlx.com/docs/products/dhtmlxGantt/
- - Learn about Vue.js here: https://vuejs.org/
+- Star our GitHub repo :star:
+- Watch our tutorials on [YouTube](https://www.youtube.com/user/dhtmlx/videos) :eyes:
+- Read us on [Medium](https://dhtmlx.medium.com) :newspaper:
+- Follow us on [Twitter](https://twitter.com/dhtmlx) :feet:
+- Like our page on [Facebook](https://www.facebook.com/dhtmlx/) :thumbsup:
