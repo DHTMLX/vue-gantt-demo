@@ -6,7 +6,7 @@
 
 ### Online
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/DHTMLX/react-gantt-demo/) 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/DHTMLX/vue-gantt-demo/) 
 
 ### On the local host 
 
