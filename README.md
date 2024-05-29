@@ -4,7 +4,11 @@
 
 ![DHTMLX Gantt with Vue Demo](https://raw.githubusercontent.com/DHTMLX/vue-gantt-demo/master/gantt.png)
 
-## How to start
+### Online
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/DHTMLX/react-gantt-demo/) 
+
+### On the local host 
 
 ```
 yarn 

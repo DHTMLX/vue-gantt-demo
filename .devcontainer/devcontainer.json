@@ -1,0 +1,11 @@
+{
+	"updateContentCommand": "yarn",
+	"postAttachCommand": "yarn start",
+	"customizations": {
+		"codespaces": {
+			"openFiles": [
+				"src/components/GanttComponent.vue"
+			]
+		}
+	}
+}
