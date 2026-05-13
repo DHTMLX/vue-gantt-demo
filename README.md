@@ -2,6 +2,16 @@
 
 [![dhtmlx.com](https://img.shields.io/badge/made%20by-DHTMLX-blue)](https://dhtmlx.com/)
 
+> ### Building a new Vue app with DHTMLX Gantt? Start with the official wrapper.
+>
+> DHTMLX ships an official **Vue Gantt** wrapper with a declarative component API, typed props, and first-class data binding. It's the recommended starting point for new projects.
+>
+> - Quick-start repo: [vue-gantt-quick-start](https://github.com/DHTMLX/vue-gantt-quick-start)
+> - Documentation: [docs.dhtmlx.com/gantt/integrations/vue/](https://docs.dhtmlx.com/gantt/integrations/vue/)
+> - Product page: [dhtmlxGantt for Vue.js](https://dhtmlx.com/docs/products/dhtmlxGantt-for-Vuejs/)
+>
+> This repo shows the **JS-first integration** — embedding `@dhx/trial-gantt` directly into Vue. It remains a valid option if you have a specific reason for low-level integration (Individual/GPL edition, deep customization of internals, or an existing JS-first codebase). For most new apps, prefer the wrapper above.
+
 ![DHTMLX Gantt with Vue Demo](https://raw.githubusercontent.com/DHTMLX/vue-gantt-demo/master/gantt.png)
 
 ### Online
